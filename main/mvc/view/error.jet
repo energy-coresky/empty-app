@@ -1,0 +1,28 @@
+#.jet system errors
+
+#.exception this template for Exceptions and die() functions
+<!doctype html><html>@php $h1 = SKY::version()['app'][3] ~php
+    <head><script>var ab={act:{}};</script>@head()</head>
+    <body style="background:url({!PATH!}img/cloud.jpg);background-size:cover;margin:0 10px;@unless($tracing)text-align:center;~unless">
+    @if($tracing)<h1>MEDCRM.SKY version {{$h1}}</h1>~if
+    @inc(__std.ex_inner)
+    @if($tracing)<h1>MEDCRM.SKY version {{$h1}}</h1>~if
+    </body>
+</html>
+#.exception
+
+
+#.404 this template for soft errors inside app layout
+@php isset($h1) or $h1 = '404'; ~php
+
+<br><br><br><br><br>
+
+<div style="display:inline-block;width:100%;margin-top:5%">
+    <div style="width:90%;margin-left:10%; ">
+        <h1>@t(Страница не найдена)</h1>
+        <img src="img/logo.png"><img src="img/logo.png"> &nbsp;
+        <span style="color:silver;font-size:111px">{!$sky->error_no!}</span>
+    </div>
+    <pre>{!$tracing!}</pre>
+</div>
+#.404

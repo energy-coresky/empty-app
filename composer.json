@@ -1,0 +1,23 @@
+{
+  "name": "coresky/hole",
+  "type": "project",
+  "license": "MIT",
+  "description": "Empty project from Coresky framework",
+  "keywords": [
+    "coresky",
+    "coresky framework",
+    "sky",
+    "empty project",
+    "hole"
+  ],
+  "require": {
+    "php": ">7.0",
+    "energy/air": "0.1.31"
+  },
+  "authors": [
+    {
+      "name": "Energy",
+      "homepage": "http://coresky.net/"
+    }
+  ]
+}
