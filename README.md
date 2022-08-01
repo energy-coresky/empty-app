@@ -3,6 +3,8 @@
 
 Docs: [wiki section](https://github.com/energy-coresky/air/wiki) (russian only).
 
+Homepage: https://coresky.net/
+
 # Install & run
 
 ```bash
