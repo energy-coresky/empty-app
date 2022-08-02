@@ -17,7 +17,7 @@ ini_set('error_reporting', DEBUG ? -1 : 0);
 
 define('CLI', 'cli' == PHP_SAPI);
 define('DIR_M', basename(__DIR__));
-define('DIR_S', is_dir('c:/web/air') ? 'c:/web/air' : 'vendor/energy/air');
+define('DIR_S', is_dir('../air') ? '../air' : 'vendor/energy/air');
 
 require DIR_S . '/sky.php';
 require DIR_S . '/heaven.php';

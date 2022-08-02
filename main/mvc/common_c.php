@@ -5,7 +5,7 @@ class common_c extends Controller
     use HOOK;
 
     function error_y($action) {
-        return ['h1' => 'MEDCRM.SKY version ' . SKY::version()['app'][3]];
+        return ['h1' => 'HOLE.SKY version ' . SKY::version()['app'][3]];
     }
 
     function head_y($action) {
@@ -51,7 +51,7 @@ class common_c extends Controller
             return;
 
         return [
-            'll' => 1,
+            'user' => $user,
         ];
     }
 }

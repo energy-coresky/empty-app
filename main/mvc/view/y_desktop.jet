@@ -5,7 +5,7 @@
   <div id="head"><a href="{{PATH}}">MAIN</a> @pdaxt</div>
   <div id="content"><div>@inc(*)</div></div>
   <div id="foot">
-    Powered <a href="#">by SKY-Framework</a>
+    Powered <a href="https://coresky.net/">by SKY-Framework</a>
     {{SKY::version()['app'][1]}}, {!date('Y')!} year
   </div>
 </div>

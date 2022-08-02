@@ -2,11 +2,11 @@
 
 #.exception this template for Exceptions and die() functions
 <!doctype html><html>@php $h1 = SKY::version()['app'][3] ~php
-    <head><script>var ab={act:{}};</script>@head()</head>
+    <head>@head()</head>
     <body style="background:url({!PATH!}img/cloud.jpg);background-size:cover;margin:0 10px;@unless($tracing)text-align:center;~unless">
-    @if($tracing)<h1>MEDCRM.SKY version {{$h1}}</h1>~if
+    @if($tracing)<h1>HOLE.SKY version {{$h1}}</h1>~if
     @inc(__std.ex_inner)
-    @if($tracing)<h1>MEDCRM.SKY version {{$h1}}</h1>~if
+    @if($tracing)<h1>HOLE.SKY version {{$h1}}</h1>~if
     </body>
 </html>
 #.exception
@@ -19,8 +19,7 @@
 
 <div style="display:inline-block;width:100%;margin-top:5%">
     <div style="width:90%;margin-left:10%; ">
-        <h1>@t(Страница не найдена)</h1>
-        <img src="img/logo.png"><img src="img/logo.png"> &nbsp;
+        <h1>Page not found</h1>
         <span style="color:silver;font-size:111px">{!$sky->error_no!}</span>
     </div>
     <pre>{!$tracing!}</pre>
