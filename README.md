@@ -10,12 +10,12 @@ Homepage: https://coresky.net/
 With composer:
 
 ```bash
-composer create-project coresky/hole test
-cd test/public
+composer create-project coresky/hole hole
+cd hole/public
 php ../vendor/energy/air/sky s
 ```
 
-Or with `moon` [download zip](https://coresky.net/api?get=hole.zip) & type in console:
+Or with moon:
 
 ```bash
 curl https://coresky.net/api?get=hole.zip > hole.zip
