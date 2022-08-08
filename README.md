@@ -10,7 +10,7 @@ Homepage: https://coresky.net/
 With composer:
 
 ```bash
-composer create-project coresky/hole hole
+composer create-project coresky/hole hole "dev-master"
 cd hole/public
 php ../vendor/energy/air/sky s
 ```

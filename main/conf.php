@@ -24,3 +24,4 @@ require DIR_S . '/heaven.php';
 
 #SKY::$databases = ['driver' => 'mysqli', 'dsn' => 's localhost root '];
 SKY::$databases = ['driver' => 'sqlite3', 'dsn' => 'hole.base'];
+
