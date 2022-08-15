@@ -30,11 +30,8 @@ class common_c extends Controller
         $sky->is_mobile = $user->v_mobi;
 
        $sky->ajax or MVC::$layout = $sky->is_mobile ? 'mobile' : 'desktop';
-
         $sky->show_pdaxt = true;
-        
-        $link = PROTO . '://' . DOMAIN . PORT;
-        define('LINK', $link . PATH);
+        define('LINK', PROTO . '://' . DOMAIN . PORT . PATH);
 
         $no_auth = $sky->_0 == '_init' || $sky->_0 == 'main' && $sky->_1 == 'lang';
 
