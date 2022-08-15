@@ -24,3 +24,16 @@ unzip hole.zip -d hole/public
 cd hole/public
 php moon.php hole.sky
 ```
+
+Or download all with git:
+
+```bash
+git clone https://github.com/energy-coresky/empty-app.git
+git clone https://github.com/energy-coresky/air.git
+# then run PHP's embedded web-server:
+cd empty-app/public
+php ../../air/sky s
+```
+
+After "HOLE.SKY." running, try download & install Dev-wares using
+Dev-tool's web-interface..
