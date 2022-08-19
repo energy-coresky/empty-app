@@ -1,7 +1,7 @@
 <?php
 
 define('START_TS', microtime(true));
-define('DEV', 'WINNT' == PHP_OS);
+define('DEV', true);
 define('DEBUG', DEV ? 1 : 0); # 1, 2, 3 - verbosity level, 0 - debugging off
 define('_PUBLIC', 'HOLE.SKY');
 define('PASS_CRYPT', 0);
