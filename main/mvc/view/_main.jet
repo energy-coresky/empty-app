@@ -1,6 +1,6 @@
 
 #.empty
-<h1>HOLE.SKY. {{SKY::version()['app'][3]}}</h1>
+<h1>{{SKY::version()['app'][3]}}</h1>
 <h2>Start new SKY-application from the scratch</h2>
 <hr>
 #.empty
