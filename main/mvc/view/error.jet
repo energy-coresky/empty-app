@@ -12,7 +12,7 @@
 #.exception
 
 
-#.404 this template for soft errors inside app layout
+#.404._404 this template for soft errors inside app layout
 @php isset($h1) or $h1 = '404'; ~php
 
 <br><br><br><br><br>
@@ -24,4 +24,8 @@
     </div>
     <pre>{!$tracing!}</pre>
 </div>
-#.404
+#.404._404
+
+#._
+Default template
+#._

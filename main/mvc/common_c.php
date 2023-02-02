@@ -13,15 +13,16 @@ class common_c extends Controller
         $this->init();
 
         Plan::$view = $user->v_style ?: 'main';
-        $this->x_doc_id = $this->x_day = 0;
-        $this->x_today = substr(NOW, 0, 10);
-        $user->v_day_lo or $user->v_day_lo = $this->x_today;
-        return ['pid' => $this->y_pid = $user->pid];
+        $this->k_doc_id = $this->k_day = 0;
+        $this->k_today = substr(NOW, 0, 10);
+        $user->v_day_lo or $user->v_day_lo = $this->k_today;
+        return ['pid' => $this->k_pid = $user->pid];
     }
 
     function init() {
         global $sky, $user;
 
+        $sky->open();
         $user = new USER;
         $user->guard_csrf();
         $user->guard_origin();
