@@ -1,22 +1,12 @@
 #.jet system errors
 
-#.exception this template for Exceptions and die() functions
-<!doctype html><html>@php $h1 = SKY::version()['app'][3] ~php
-    <head>@head()</head>
-    <body style="background:url({!PATH!}img/cloud.jpg);background-size:cover;margin:0 10px;@unless($tracing)text-align:center;~unless">
-    @if($tracing)<h1>HOLE.SKY version {{$h1}}</h1>~if
-    @inc(__std.ex_inner)
-    @if($tracing)<h1>HOLE.SKY version {{$h1}}</h1>~if
-    </body>
-</html>
-#.exception
-
+#._
+Magic template
+#._
 
 #.404._404 this template for soft errors inside app layout
 @php isset($h1) or $h1 = '404'; ~php
-
-<br><br><br><br><br>
-
+<br>
 <div style="display:inline-block;width:100%;margin-top:5%">
     <div style="width:90%;margin-left:10%; ">
         <h1>Page not found</h1>
@@ -26,6 +16,13 @@
 </div>
 #.404._404
 
-#._
-Magic template
-#._
+#.crash this template for crashes when FLY=0
+<!doctype html><html>@php $h1 = SKY::version()['app'][3] ~php
+    <head>@head()</head>
+    <body style="background:url({!PATH!}img/cloud.jpg);background-size:cover;margin:0 10px;@unless($tracing)text-align:center;~unless">
+    @if($tracing)<h1>HOLE.SKY version {{$h1}}</h1>~if
+    @inc(__std.ex_inner)
+    @if($tracing)<h1>HOLE.SKY version {{$h1}}</h1>~if
+    </body>
+</html>
+#.crash
