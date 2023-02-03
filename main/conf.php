@@ -9,9 +9,8 @@ define('PHP_TZ', 'Europe/Kiev');
 define('DEFAULT_LG', '');
 define('EXTRA', 0);     // 0 - off, 1 - on
 
-ini_set('log_errors', 0);     # 0
-ini_set('display_errors', 1); # 1
-ini_set('error_reporting', DEBUG ? -1 : 0);
+ini_set('log_errors', 0);               # 0
+ini_set('display_errors', DEV ? 1 : 0); # 1
 
 define('DIR_M', basename(__DIR__));
 define('DIR_S', is_dir('../air') ? '../air' : 'vendor/energy/air');
