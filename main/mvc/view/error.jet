@@ -19,10 +19,9 @@ Magic template
 #.crash this template for crashes when FLY=0
 <!doctype html><html>@php $h1 = SKY::version()['app'][3] ~php
     <head>@head()</head>
-    <body style="background:url({!PATH!}img/cloud.jpg);background-size:cover;margin:0 10px;@unless($tracing)text-align:center;~unless">
+    <body style="background:url(@inc(__img.cloud2));background-size:cover;margin:0 10px;@unless($tracing)text-align:center;~unless">
     @if($tracing)<h1>HOLE.SKY version {{$h1}}</h1>~if
     @inc(__std.ex_inner)
-    @if($tracing)<h1>HOLE.SKY version {{$h1}}</h1>~if
     </body>
 </html>
 #.crash
