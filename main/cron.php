@@ -6,8 +6,7 @@ chdir(DIR);
 
 require 'main/conf.php';
 $sky  = new SKY;
-$cron = new Schedule;
-$cron
+($cron = new Schedule)
 
 ->at('0 23', function() use ($cron) {
     $cron->sql('delete from visitors where (dt_l + interval $. day < now()) and uid is null', $cron->n_clear_nc);
