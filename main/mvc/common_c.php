@@ -13,10 +13,10 @@ class common_c extends Controller
         $this->init();
 
         Plan::$view = $user->v_style ?: 'main';
-        $this->k_doc_id = $this->k_day = 0;
-        $this->k_today = substr(NOW, 0, 10);
-        $user->v_day_lo or $user->v_day_lo = $this->k_today;
-        return ['pid' => $this->k_pid = $user->pid];
+        $this->_doc_id = $this->_day = 0;
+        $this->_today = substr(NOW, 0, 10);
+        $user->v_day_lo or $user->v_day_lo = $this->_today;
+        return ['pid' => $this->_pid = $user->pid];
     }
 
     function init() {
