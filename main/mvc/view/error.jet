@@ -1,7 +1,15 @@
 #.jet system errors
 
 #._
-Magic template
+@php isset($h1) or $h1 = '404'; ~php
+<br>
+<div style="display:inline-block;width:100%;margin-top:5%">
+    <div style="width:90%;margin-left:10%; ">
+        <h1>Page not found</h1>
+        <span style="color:silver;font-size:111px">{!$sky->error_no!}</span>
+    </div>
+    <pre>{!$tracing!}</pre>
+</div>
 #._
 
 #.404._404 this template for soft errors inside app layout
@@ -19,9 +27,11 @@ Magic template
 #.crash this template for crashes when FLY=0
 <!doctype html><html>@php $h1 = SKY::version()['app'][3] ~php
     <head>@head()</head>
-    <body style="background:url(@inc(__img.cloud2));background-size:cover;margin:0 10px;@unless($tracing)text-align:center;~unless">
+    <body style="background:url({{PATH}}_img?cloud2); background-size:cover;margin:0 10px;@unless($tracing)text-align:center;~unless">
     @if($tracing)<h1>HOLE.SKY version {{$h1}}</h1>~if
-    @inc(__std.ex_inner)
+    @inc(__std.inner)
+    Refresh to see tracing
     </body>
 </html>
 #.crash
+
