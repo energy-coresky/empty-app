@@ -1,6 +1,23 @@
 
 #.empty
+#use(.bottom)
 <h1>{{SKY::version()['app'][3]}}</h1>
 <h2>Start new SKY-application from the scratch</h2>
 <hr>
-#.empty
+#.empty.bottom
+<div style="background:url({{PATH}}_img?cloud2);background-size:cover;min-height:calc(100vh - 300px)">
+  <h1 style="color:#fff;padding-top:90px;">Wellcome!</h1>
+  <h2 style="color:#fff;">Open <a @href(dev('_dev?ware'))>dev-tools</a> & setup "wares"</h2>
+</div>@php
+# init DEV configuration
+if (!$sky->d_static) {
+    $sky->d_static = 'm';
+    $sky->d_jet_cache = 1;
+    $sky->d_red_label = 1;
+    $sky->d_se = 'https://yandex.ru/search/?text=%s';
+    $sky->d_manual = 'ru';
+    $sky->d_lgt = '_lgt';
+    $sky->d_second_wares = 'vendor/coresky';
+}
+~php
+#.bottom

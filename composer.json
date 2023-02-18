@@ -12,7 +12,11 @@
   ],
   "require": {
     "php": ">7.0",
-    "energy/air": "^0.35"
+    "energy/air": "^0.35",
+    "coresky/mercury": "^0.34",
+    "coresky/venus": "^0.34",
+    "coresky/earth": "^0.34",
+    "erusev/parsedown": "^1.7"
   },
   "authors": [
     {
