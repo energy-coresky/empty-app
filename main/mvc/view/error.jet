@@ -20,7 +20,7 @@
         <h1>Page not found</h1>
         <span style="color:silver;font-size:111px">{!$sky->error_no!}</span>
     </div>
-    <pre>{!$tracing!}</pre>
+    <pre>{!$tracing ?? ''!}</pre>
 </div>
 #.404._404
 

@@ -10,9 +10,11 @@ Homepage: https://coresky.net/
 With composer:
 
 ```bash
-composer create-project coresky/hole hole "dev-master"
-cd hole/public
-php ../vendor/energy/air/sky s
+composer create-project coresky/hole
+# or try latest dev: composer create-project coresky/hole hole "dev-master"
+cd hole
+# then run PHP's embedded web-server:
+php vendor/energy/air/sky s
 ```
 
 Or with moon:
@@ -25,10 +27,7 @@ cd hole/public
 php moon.php hole.sky
 ```
 
-After "HOLE.SKY." running, try download & install Dev-wares using
-Dev-tool's web-interface..
-
-Or download all with git:
+Or download latest dev with git:
 
 ```bash
 # the app
@@ -42,6 +41,5 @@ git clone https://github.com/energy-coresky/parsedown.git
 git clone https://github.com/energy-coresky/earth.git
 git clone https://github.com/energy-coresky/mercury.git
 # then run PHP's embedded web-server:
-cd ../public
 php ../../air/sky s
 ```

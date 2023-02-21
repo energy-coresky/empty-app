@@ -7,7 +7,7 @@
 #.empty.bottom
 <div style="background:url({{PATH}}_img?cloud2);background-size:cover;min-height:calc(100vh - 300px)">
   <h1 style="color:#fff;padding-top:90px;">Wellcome!</h1>
-  <h2 style="color:#fff;">Open <a @href(dev('_dev?ware'))>dev-tools</a> & setup "wares"</h2>
+  <h2 style="color:#fff;">Open <a style="color:yellow" @href(dev('_dev?ware'))>dev-tools</a> & setup "wares"</h2><a style="" @href(box('test'))>box</a>
 </div>@php
 # init DEV configuration
 if (!$sky->d_static) {

@@ -8,7 +8,7 @@
     @block(`` as bottom)
   </div>
   <div id="foot">
-    Powered <a href="https://coresky.net/">by SKY-Framework</a>
+    Powered by <a href="https://coresky.net/">Coresky framework</a>
     {{SKY::version()['app'][1]}}, {!date('Y')!} year
   </div>
 </div>
