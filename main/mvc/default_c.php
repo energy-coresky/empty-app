@@ -2,6 +2,7 @@
 
 class default_c extends Controller
 {
+    use HOOK_D;
 
     function a_auth() {
         global $user;

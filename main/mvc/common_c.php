@@ -2,7 +2,7 @@
 
 class common_c extends Controller
 {
-    use HOOK;
+    use HOOK_C;
 
     function error_y($action) {
         return ['h1' => 'HOLE.SKY version ' . SKY::version()['app'][3]];

@@ -12,10 +12,10 @@
   ],
   "require": {
     "php": ">7.0",
-    "energy/air": "0.381",
-    "coresky/mercury": "0.381",
-    "coresky/venus": "0.381",
-    "coresky/earth": "0.381",
+    "energy/air": "dev-master",
+    "coresky/mercury": "dev-master",
+    "coresky/venus": "dev-master",
+    "coresky/earth": "dev-master",
     "erusev/parsedown": "^1.7"
   },
   "authors": [
