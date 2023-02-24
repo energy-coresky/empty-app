@@ -30,7 +30,7 @@
     <body style="background:#e0e7ff; background-size:cover;margin:0 10px;@unless($tracing)text-align:center;~unless">
     @if($tracing)<h1>HOLE.SKY version {{$h1}}</h1>~if
     @inc(__std.inner)
-    Refresh to see tracing
+    @if(!$tracing)Refresh to see tracing~if
     </body>
 </html>
 #.crash

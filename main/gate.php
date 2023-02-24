@@ -70,6 +70,20 @@ return array (
       array (
       ),
     ),
+    'a_test_crash' => 
+    array (
+      0 => 1,
+      1 => 
+      array (
+        0 => 1,
+      ),
+      2 => 
+      array (
+      ),
+      3 => 
+      array (
+      ),
+    ),
   ),
   'c_main' => 
   array (
