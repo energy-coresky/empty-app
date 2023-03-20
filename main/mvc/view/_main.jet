@@ -23,7 +23,6 @@ if (!$sky->d_static) {
 ~php
 #.bottom
 
-
 #.tests
 <h2>Hope errors never work, but we must ready catch them</h2>
 <a href=@p(main/test1)>Pretty Crash</a><br>

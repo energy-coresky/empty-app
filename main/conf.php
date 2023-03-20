@@ -3,7 +3,7 @@
 define('START_TS', microtime(true));
 define('DEV', true);
 define('DEBUG', DEV ? 1 : 0); # 1, 2, 3 - verbosity level, 0 - debugging off
-define('_PUBLIC', 'HOLE.SKY');
+define('_PUBLIC', 'hole.sky');
 define('PASS_CRYPT', 0);
 define('PHP_TZ', 'Europe/Kiev');
 define('DEFAULT_LG', '');
