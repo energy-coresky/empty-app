@@ -51,4 +51,12 @@ class common_c extends Controller
             'user' => $user,
         ];
     }
+
+    static function make_h($forward) {
+        Install::make($forward, ['common_c::trivial']);
+    }
+
+    static function trivial() {
+        return ['This is a trivial test. Hit "Run app anyway" if all other OK', false];
+    }
 }
