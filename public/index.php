@@ -1,5 +1,15 @@
 <?php # Auto generated "First-Run" file by Coresky framework
 
+function index(&$unlink = null) {
+    $fp = fopen(__FILE__, 'r');
+    fseek($fp, __COMPILER_HALT_OFFSET__);
+    $code = stream_get_contents($fp);
+    fclose($fp);
+    if ($unlink)
+        $unlink = @unlink(__FILE__);
+    return ltrim($code);
+}
+
 $ary = array (
   0 => 'ctype',
   1 => 'intl',
@@ -28,20 +38,10 @@ $tests = [
             false,
         ];
     },
-	function ($ok) {
+    function ($ok) {
         return ['This is a trivial test. Hit "Run app anyway" if all other OK', false];
-	},
+    },
 ];
-
-$index = function(&$unlink = null) {
-    $fp = fopen(__FILE__, 'r');
-    fseek($fp, __COMPILER_HALT_OFFSET__);
-    $code = stream_get_contents($fp);
-    fclose($fp);
-    if ($unlink)
-        $unlink = @unlink(__FILE__);
-    return ltrim($code);
-};
 $path = preg_replace("|[^/]*$|", '', $_SERVER['SCRIPT_NAME']);
 $uri = $_SERVER['REQUEST_URI'];
 $ok = 1;
@@ -55,7 +55,7 @@ foreach ($tests as $fun) {
 }
 $anw = $_GET && 'anw' == key($_GET) ? $_GET['anw'] : false;
 if ($ok || $anw) {
-    file_put_contents(__FILE__, $index());
+    file_put_contents(__FILE__, index());
     header("Location: " . ($anw ?: $uri));
     exit;
 }
