@@ -42,7 +42,7 @@ class common_c extends Controller
     static function make_h($forward) {
         sqlf('delete from $_visitors');
         sqlf('vacuum');
-        Install::make($forward, ['common_c::trivial']);
+        return Install::make($forward, ['common_c::trivial']);
     }
 
     static function trivial() {
