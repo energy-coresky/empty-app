@@ -94,7 +94,7 @@ dd { width: 20%; margin:0; padding: 5px; }
     <button style="float:right" onclick="location.href='<?php echo "$path?anw=" . urlencode($uri) ?>'">Run app anyway</button>
     Problem fixed: <button onclick="location.href='<?php echo $uri ?>'">Test again</button>
 </div>
-<div id="foo">βῆτα.0.444.HOLE.SKY. powered by 0.445.<a href="https://coresky.net/">Coresky</a> framework</div>
+<div id="foo">βῆτα.0.444.HOLE.SKY. powered by 0.471.<a href="https://coresky.net/">Coresky</a> framework</div>
 </body>
 </html><?php
 

@@ -14,9 +14,5 @@ ini_set('display_errors', DEV ? 1 : 0); # 1
 
 define('DIR_M', basename(__DIR__));
 define('DIR_S', is_dir('../air') ? '../air' : 'vendor/energy/air');
-
 require DIR_S . '/sky.php';
-require DIR_S . '/heaven.php';
-
-#SKY::$databases = ['driver' => 'mysqli', 'dsn' => 's localhost root '];
 SKY::$databases = ['driver' => 'sqlite3', 'dsn' => 'hole.base'];
