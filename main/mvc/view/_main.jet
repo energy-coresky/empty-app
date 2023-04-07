@@ -35,6 +35,7 @@ if (!$sky->d_static) {
 <a @href(ajax('test4'))>Ajax warning</a><br>
 <a @href(ajax('test5'))>Ajax crash</a><br>
 <a href=@p(main/test6)>Z-error(see popup on next click)</a><br>
+<a href="{{PATH}}main//test7">Twice slash main//test7</a><br>
 #.tests
 
 #.test2

@@ -2,7 +2,7 @@
 
 # this is auto generated file, do not edit
 
-return array (
+return array (   
   'default_c' => 
   array (
     'j_init' => 
@@ -64,6 +64,14 @@ return array (
           2 => '',
           3 => '[a-z\\d_\\.\\-]+',
           4 => 0,
+        ),
+        1 => 
+        array (
+          0 => '',
+          1 => '',
+          2 => '',
+          3 => '\\w+',
+          4 => 1,
         ),
       ),
       3 => 
@@ -214,6 +222,20 @@ return array (
           3 => 'test7',
           4 => 0,
         ),
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    'empty_a' => 
+    array (
+      0 => 1,
+      1 => 
+      array (
+        0 => 1,
+      ),
+      2 => 
+      array (
       ),
       3 => 
       array (
