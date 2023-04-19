@@ -2,7 +2,7 @@
 
 # this is auto generated file, do not edit
 
-return array (   
+return array (
   'default_c' => 
   array (
     'j_init' => 
@@ -84,6 +84,35 @@ return array (
       1 => 
       array (
         0 => 1,
+      ),
+      2 => 
+      array (
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    'a_auth' => 
+    array (
+      0 => 0,
+      1 => 
+      array (
+        0 => 0,
+        1 => 1,
+      ),
+      2 => 
+      array (
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    'a_logout' => 
+    array (
+      0 => 0,
+      1 => 
+      array (
+        0 => 0,
       ),
       2 => 
       array (
