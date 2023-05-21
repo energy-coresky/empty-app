@@ -4,6 +4,10 @@ class default_c extends Controller
 {
     use HOOK_D;
 
+    function empty_a() {
+        MVC::body('main.empty');
+    }
+
     function a_auth() {
         global $user;
         if ($_POST && $user->login() || $user->auth)
