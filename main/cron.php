@@ -17,5 +17,11 @@ $sky  = new SKY;
 ->at('30 9', function() use ($cron) {
     $cron->mail_error();
 })
+->at('+', function() use ($cron) {
+    // test eVar
+    $fn = fn($i) => $i > 5 ? false : ($i % 2 ? ['i' => $i * $i] : true);
+    foreach (new eVar(fn($r) => $fn($r->__i)) as $row)
+        echo $row->i;
+})
 
 ?>

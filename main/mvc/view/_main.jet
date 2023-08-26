@@ -47,3 +47,5 @@ if (!$sky->d_static) {
 &lt;img src=@p(main/test7)&gt;<br>
    <img src=@p(main/test7)>
 #.test6
+
+
