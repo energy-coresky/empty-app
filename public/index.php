@@ -61,7 +61,7 @@ if ($ok || $anw) {
 }
 ?><!doctype html>
 <html>
-<head><title>βῆτα.0.498.HOLE.SKY. application First-Run</title>
+<head><title>βῆτα.0.499.HOLE.SKY. application First-Run</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
 <style>
@@ -94,7 +94,7 @@ dd { width: 20%; margin:0; padding: 5px; }
     <button style="float:right" onclick="location.href='<?php echo "$path?anw=" . urlencode($uri) ?>'">Run app anyway</button>
     Problem fixed: <button onclick="location.href='<?php echo $uri ?>'">Test again</button>
 </div>
-<div id="foo">βῆτα.0.498.HOLE.SKY. powered by 0.497.<a href="https://coresky.net/">Coresky</a> framework</div>
+<div id="foo">βῆτα.0.499.HOLE.SKY. powered by 0.499.<a href="https://coresky.net/">Coresky</a> framework</div>
 </body>
 </html><?php
 
