@@ -1,7 +1,7 @@
 _arch
 composer.lock
-main/wares.php
-var
+var/*
+!var/upload
 vendor
 wares
 s.php

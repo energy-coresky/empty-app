@@ -8,14 +8,15 @@
     "coresky framework",
     "sky",
     "empty project",
-    "hole"
+    "hole application"
   ],
   "require": {
     "php": ">7.0",
-    "energy/air": "0.501",
+    "energy/air": "dev-master",
     "coresky/mercury": "dev-master",
-    "coresky/venus": "0.501",
-    "coresky/earth": "0.497",
+    "coresky/venus": "dev-master",
+    "coresky/earth": "dev-master",
+    "coresky/upload": "~0.514",
     "erusev/parsedown": "^1.7"
   },
   "authors": [

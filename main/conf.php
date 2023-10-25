@@ -16,3 +16,11 @@ define('DIR_M', basename(__DIR__));
 define('DIR_S', is_dir('../air') ? '../air' : 'vendor/energy/air');
 require DIR_S . '/sky.php';
 SKY::$databases = ['driver' => 'sqlite3', 'dsn' => 'hole.base'];
+
+/* uncomment & tune for Redis test
+SKY::$plans = [
+    'cache' => ['path' => 'L/cache', 'driver' => 'redis', 'dsn' => 'localhost'],
+    'gate' => ['path' => 'L/gate', 'use' => 'cache'],
+    'jet' => ['path' => 'L/jet', 'use' => 'cache'],
+];
+*/

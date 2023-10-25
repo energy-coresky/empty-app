@@ -43,6 +43,9 @@ class common_c extends Controller
         sqlf('delete from $_visitors');
         sqlf('update $_memory set tmemo="" where id<8');
         sqlf('vacuum');
+        $swap = ['../air_wares' => 'vendor/coresky'];
+        $forward or $swap = array_flip($swap);
+        Plan::_p('wares.php', strtr(Plan::_g('wares.php'), $swap));
         return Install::make($forward, ['common_c::trivial']);
     }
 
