@@ -94,7 +94,7 @@ return array (
     ),
     'a_auth' => 
     array (
-      0 => 0,
+      0 => 1,
       1 => 
       array (
         0 => 0,
@@ -109,10 +109,24 @@ return array (
     ),
     'a_logout' => 
     array (
+      0 => 1,
+      1 => 
+      array (
+        0 => 1,
+      ),
+      2 => 
+      array (
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    'empty_a' => 
+    array (
       0 => 0,
       1 => 
       array (
-        0 => 0,
+        0 => 1,
       ),
       2 => 
       array (
@@ -122,7 +136,7 @@ return array (
       ),
     ),
   ),
-  'c_main' => 
+  'c_demo' => 
   array (
     'a_tests' => 
     array (
@@ -256,7 +270,30 @@ return array (
       array (
       ),
     ),
-    'empty_a' => 
+    'a_upload' => 
+    array (
+      0 => 1,
+      1 => 
+      array (
+        0 => 0,
+        1 => 1,
+      ),
+      2 => 
+      array (
+        0 => 
+        array (
+          0 => '',
+          1 => '',
+          2 => '',
+          3 => 'upload',
+          4 => 0,
+        ),
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    'a_file' => 
     array (
       0 => 1,
       1 => 
@@ -265,6 +302,22 @@ return array (
       ),
       2 => 
       array (
+        0 => 
+        array (
+          0 => '',
+          1 => '',
+          2 => '',
+          3 => 'file',
+          4 => 0,
+        ),
+        1 => 
+        array (
+          0 => '',
+          1 => 'id(\\d+)',
+          2 => '',
+          3 => '',
+          4 => 0,
+        ),
       ),
       3 => 
       array (

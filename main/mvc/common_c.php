@@ -4,52 +4,41 @@ class common_c extends Controller
 {
     use HOOK_C;
 
-    function error_y($action) {
-        return ['h1' => 'HOLE.SKY version ' . SKY::version()['app'][3]];
-    }
-
     function head_y($action) {
-        global $user;
+        new Middleware;
 
-        $this->init();
-        Plan::$view = $user->v_style ?: 'main';
-        return ['pid' => $user->pid];
-    }
-
-    function init() {
-        global $sky, $user;
-
-        $sky->open();
-        $sky->has_public = $sky->admins = false;
-        $sky->fly or MVC::$layout = $sky->is_mobile ? 'mobile' : 'desktop';
-        $sky->show_pdaxt = true;
-        $user = new USER;
-        $user->guard_csrf();
-        $user->guard_origin();
+        return [
+            'dtroot' => $this->t_users->dtroot(),
+        ];
     }
 
     function tail_y() {
-        global $sky, $user;
+        global $user;
 
         if (!MVC::$layout)
             return;
+        Plan::tail('', '~/m/desktop.js', '~/m/desktop.css');
 
         return [
             'user' => $user,
         ];
     }
 
-    static function make_h($forward) {
-        sqlf('delete from $_visitors');
-        sqlf('update $_memory set tmemo="" where id<8');
-        sqlf('vacuum');
-        $swap = ['../air_wares' => 'vendor/coresky'];
-        $forward or $swap = array_flip($swap);
-        Plan::_p('wares.php', strtr(Plan::_g('wares.php'), $swap));
-        return Install::make($forward, ['common_c::trivial']);
+    function error_y($action) {
+        return [
+            'h1' => 'HOLE.SKY version ' . SKY::version()['app'][3],
+        ];
     }
 
-    static function trivial() {
-        return ['This is a trivial test. Hit "Run app anyway" if all other OK', false];
+    static function make_h($forward) {
+        sqlf('delete from $_visitors');
+        sqlf('update $_memory set dt=null, tmemo="" where id<8');
+        sqlf('vacuum');
+        $swap = ['C:/web/air_wares' => 'vendor/coresky'];
+        $forward or $swap = array_flip($swap);
+        Plan::_p('wares.php', strtr(Plan::_g('wares.php'), $swap));
+        return Install::make($forward, [function () {
+            return yml('+ @eval @inc(make) mvc/timezone.yaml');
+        }]);
     }
 }

@@ -1,0 +1,62 @@
+#.empty
+#use(.bottom)
+<h1>{{SKY::version()['app'][3]}}</h1>
+<h2>Start new Coresky application from scratch</h2>
+<hr>
+#.empty.bottom
+<div style="background:url({{PATH}}_img?cloud2);background-size:cover;min-height:calc(100vh - 300px)">
+  <h1 style="color:#fff;padding-top:90px;">Welcome!</h1>
+  <h2 style="color:#fff;">Open <a style="color:yellow" @href(dev('_dev?ware'))>dev-tools</a> & setup "wares"</h2>
+  <h2 style="color:#fff;">Try <a style="color:yellow" href="demo/tests">tests</a> also</h2>
+</div>@php
+# init DEV configuration
+if (!$sky->d_static) {
+    $sky->d_static = 'm';
+    $sky->d_red_label = 1;
+    $sky->d_se = 'https://yandex.ru/search/?text=%s';
+    $sky->d_manual = 'ru';
+    $sky->d_lgt = '_lgt';
+    $sky->d_second_wares = 'vendor/coresky';
+    $y_dtroot();
+}
+~php
+#.bottom
+
+#.auth
+<form method="post">@csrf
+  login <input name="login"> use root<br>
+  password <input name="password"> use xroot<br>
+  <label><input name="mem" type="checkbox" checked> memorize me</label><br>
+  <input type="submit" value="Authorize">
+</form>
+#.auth
+
+#.layout
+<!doctype html><html>
+<head>@head</head>
+<body>
+<div id="wrapper">
+  <div id="head">
+    <a href=@p>MAIN</a> <a href=@p(demo/upload)>UPLOAD</a>
+    @pdaxt
+    @if($sky->auth)
+      @if(ACM::Raclu())<a href=@acl("acl?users")>ACL</a>~if
+      <b>{{$y_user->login}}</b> <a href=@p(logout)>logout</a>
+      @if(SKY::v('emulate'))<a href=@acl("acl?emulate={!SKY::v('emulate')!}")><m><b>back to self user</b></m></a>~if
+    @else
+      <a href=@p(auth)>login</a>
+    ~if
+  </div>
+  <div id="content">
+    <div>@inc(*)</div>
+    @block(`` as bottom)
+  </div>
+  <div id="foot">
+    Powered by <a href="https://coresky.net/">Coresky framework</a>
+    {{SKY::version()['app'][1]}}, {!date('Y')!} year
+  </div>
+</div>
+@tail
+</body>
+</html>
+#.layout

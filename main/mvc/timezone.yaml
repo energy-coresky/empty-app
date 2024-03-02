@@ -1,0 +1,40 @@
+
+#.make
++ |
+  $yml = (object)yml('+ @inc(yml) mvc/timezone.yaml');
+  $yml->html = Jet::text($yml->html, ['tz' => yml('+ @json@inc(timezones)')]);
+  return Jet::text($yml->php, ['yml' => $yml]);
+#.make
+
+#.yml ============================================================================
+php: |
+  if (!$ok)
+      return false;
+  if ($_POST)
+      file_put_contents('../.env', "APP_DEV true\nAPP_TZ " . $_POST['tz']);
+  return [{!var_export($yml->html, true)!}, (bool)$_POST, {!var_export($yml->button, true)!}];
+  
+html: |
+  Select timezone: <select onchange="tzset(this)"></select> <select name="tz"></select>
+  <script>
+  let tz = JSON.parse('{!$tz!}');
+  let st = document.querySelectorAll("select");
+  function tzset(el,x) {
+    let s0 = "<option>**Region</option>",
+      s1 = "<option>UTC</option>";
+    if(x) { Object.keys(tz).forEach(function (name) {
+      s0 += "<option>" + name + "</option>";
+    }); st[0].innerHTML = s0; }
+    st[1].innerHTML = s1;
+    if(x) return;
+    for (var i in tz[el.value]) {
+      s1 += "<option>" + el.value + "/" + tz[el.value][i] + "</option>";
+    }
+    st[1].innerHTML = s1;
+  }
+  tzset(st[0],1)
+  </script>
+  
+button: |
+  <input type="submit" value="select">
+#.yml

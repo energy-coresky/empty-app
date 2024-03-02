@@ -1,0 +1,42 @@
+# core section is mandatory. Cached in sky_plan.php
+# loaded for every web or console clicks
+core:
+  timezone: $APP_TZ(UTC)
+  define:
+    DEV: $APP_DEV(false)
+    DEBUG: 0
+    DEV+DEBUG: 1 # 1, 2, 3 - verbosity level, 0 - debugging off
+    _PUBLIC: hole.sky
+    DEFAULT_LG: ''
+  ini_set:
+    log_errors: 0
+    display_errors: 0
+    DEV+display_errors: 1
+  profiles:
+    - Anonymous # pid=0 !!!
+    - Root
+    - Mia
+  databases: {driver: sqlite3, dsn: hole.base}
+
+# other sections (than plan) cached by `cache` plan separately
+auth: # mandatory in web for users
+  crypt: false
+
+#seetail: $TAIL
+
+~
+CONSOLE COMMAND TO TEST:
+sky y
+OR:
+sky y venus config.yaml 2
+sky y "seeself: $TAIL0"
+sky y "- @ini_get display_errors"
+sky y "+ @csv(;) $PATH()"
+sky y "+ @scan(%s %d %o) Coresky 0101 777"
+TRY EVAL:
+sky eval "print_r(cfg()->profiles);"
+sky eval "echo yml('+ @json @inc(timezones)');"
+sky eval "print_r(yml('+ @inc(languages)'));"
+sky eval "var_export(Yaml::lint('-'));"
+sky eval "var_export(Yaml::lint('a'));"
+sky eval "print_r(yml('+ @sql(#select id as _,* from $_memory where id>5)'));" > z

@@ -5,15 +5,7 @@
 return array (
   'earth' => 
   array (
-    'path' => 'vendor/coresky/earth',
-    'class' => 
-    array (
-    ),
-    'tune' => '',
-  ),
-  'mercury' => 
-  array (
-    'path' => 'vendor/coresky/mercury',
+    'path' => '../air_wares/earth',
     'class' => 
     array (
     ),
@@ -21,27 +13,10 @@ return array (
   ),
   'venus' => 
   array (
-    'path' => 'vendor/coresky/venus',
+    'path' => '../air_wares/venus',
     'class' => 
     array (
     ),
     'tune' => '',
-  ),
-  'upload' => 
-  array (
-    'path' => 'vendor/coresky/upload',
-    'class' => 
-    array (
-      0 => 'default_c',
-    ),
-    'tune' => 'upload',
-    'options' => 
-    array (
-      'connection' => '',
-      'table' => 'file',
-      'dir' => 'var/upload',
-      'use_crop' => '1',
-      'crop_sizes' => '200 x 200,200 x 500',
-    ),
   ),
 );

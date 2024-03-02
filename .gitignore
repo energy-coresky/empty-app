@@ -1,9 +1,9 @@
 _arch
-composer.lock
-var/*
-!var/upload
+var
 vendor
 wares
 s.php
 hole.base
+composer.lock
 main/venus
+.env

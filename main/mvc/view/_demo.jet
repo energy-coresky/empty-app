@@ -1,0 +1,38 @@
+
+#.tests
+<h2>Hope errors never work, but we must ready catch them</h2>
+<a href=@p(demo/test1)>Pretty Crash</a><br>
+<a href=@p(demo/test2)>Crash "headers sent"</a><br>
+<a @href(dev('_test_crash'))>Pretty Crash inside dev-tools</a><br>
+<a @href(dev('_test_crash?_'))>Crash "headers sent" inside dev-tools</a><br>
+<a href=@p(demo/testx)>Soft error 404 (no action)</a><br>
+<a href=@p(demo/test3)>Soft error 404 (return 404)</a><br>
+<a href=@p(demo/test8)>Gate error</a><br>
+<a @href(ajax('test4'))>Ajax warning</a><br>
+<a @href(ajax('test5'))>Ajax crash</a><br>
+<a href=@p(demo/test6)>Z-error(see popup on next click)</a><br>
+<a href="{{PATH}}demo//test7">Twice slash demo//test7</a><br>
+#.tests
+
+#.test2
+@inc(__std.test_crash)
+#.test2
+
+#.test6
+<p>This page contain this:<br>
+&lt;img src=@p(demo/test7)&gt;<br>
+   <img src=@p(demo/test7)>
+#.test6
+
+
+#.upload
+<h2>Upload ware demo</h2>
+<form>
+<div class="imgs" style="width:200px;height:200px;border:2px dashed silver;">
+  <span>drag image (or click) here</span>
+  <progress value="0" style="display:none"></progress>
+</div>
+<input type="file" style="opacity:0; position:fixed; top:-100em" autocomplete="off">
+<input type="hidden" value="" name="pic" autocomplete="off"> 
+</form>
+#.upload

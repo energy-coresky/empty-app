@@ -29,8 +29,9 @@
     <head>@head()</head>
     <body style="background:#e0e7ff; background-size:cover;margin:0 10px;@unless($tracing)text-align:center;~unless">
     @if($tracing)<h1>HOLE.SKY version {{$h1}}</h1>~if
+    @if($tracing)<a href="{{HOME . URI}}">Refresh</a> to see production page~if
     @inc(__std.inner)
-    @if(!$tracing)Refresh to see tracing~if
+    @if(!$tracing)<a href="{{HOME . URI}}">Refresh</a> to see tracing~if
     </body>
 </html>
 #.crash

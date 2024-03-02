@@ -1,11 +1,16 @@
 <?php
 
-class c_main extends Controller
+class c_demo extends Controller
 {
-    function empty_a() {
+    function a_tests() {
     }
 
-    function a_tests() {
+    function a_upload() {
+        upload\ant::init();
+    }
+
+    function a_file($id) {
+        upload\ant::get_file($id);
     }
 
     function a_test1() {
@@ -35,5 +40,8 @@ class c_main extends Controller
         MVC::mime('image/png');
         echo []; # error
         throw new Stop;
+    }
+
+    function a_test8() {
     }
 }
