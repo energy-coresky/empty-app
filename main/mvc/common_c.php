@@ -38,6 +38,7 @@ class common_c extends Controller
         $forward or $swap = array_flip($swap);
         Plan::_p('wares.php', strtr(Plan::_g('wares.php'), $swap));
         return Install::make($forward, [function () {
+            echo "\nTimezone's 'first-run' written\n";
             return yml('+ @eval @inc(make) mvc/timezone.yaml');
         }]);
     }
