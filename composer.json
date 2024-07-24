@@ -16,7 +16,7 @@
     "coresky/mercury": "dev-master",
     "coresky/venus": "dev-master",
     "coresky/earth": "dev-master",
-    "coresky/upload": "~0.545",
+    "coresky/upload": "~0.546",
     "coresky/acl": "~0.545",
     "erusev/parsedown": "^1.7"
   },
