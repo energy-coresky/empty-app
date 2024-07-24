@@ -32,6 +32,7 @@ class common_c extends Controller
 
     static function make_h($forward) {
         sqlf('delete from $_visitors');
+        sqlf('delete from $_file');
         sqlf('update $_memory set dt=null, tmemo="" where id<8');
         sqlf('vacuum');
         $swap = ['../air_wares' => 'vendor/coresky'];
