@@ -135,6 +135,28 @@ return array (
       array (
       ),
     ),
+    'a_img' => 
+    array (
+      0 => 0,
+      1 => 
+      array (
+        0 => 1,
+      ),
+      2 => 
+      array (
+        0 => 
+        array (
+          0 => '',
+          1 => 'img',
+          2 => '',
+          3 => '\\d+',
+          4 => 0,
+        ),
+      ),
+      3 => 
+      array (
+      ),
+    ),
   ),
   'c_demo' => 
   array (

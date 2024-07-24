@@ -6,7 +6,7 @@ call_user_func(function() {
     fclose($fp);
     foreach ($list as $n => $one) {
         [$y, $eq] = explode("\n~\n", $one, 2);
-        $yml = Yaml::text($y);
+        $yml = YML::text($y);
         $yy = !is_string($yml) ? var_export($yml, 1) : $yml;
         if ($yy !== $eq) {
             echo "\nYaml: \n$y\n";

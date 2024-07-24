@@ -37,6 +37,6 @@ TRY EVAL:
 sky eval "print_r(cfg()->profiles);"
 sky eval "echo yml('+ @json @inc(timezones)');"
 sky eval "print_r(yml('+ @inc(languages)'));"
-sky eval "var_export(Yaml::lint('-'));"
-sky eval "var_export(Yaml::lint('a'));"
+sky eval "var_export(YML::lint('-'));"
+sky eval "var_export(YML::lint('a'));"
 sky eval "print_r(yml('+ @sql(#select id as _,* from $_memory where id>5)'));" > z

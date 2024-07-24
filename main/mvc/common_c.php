@@ -34,11 +34,11 @@ class common_c extends Controller
         sqlf('delete from $_visitors');
         sqlf('update $_memory set dt=null, tmemo="" where id<8');
         sqlf('vacuum');
-        $swap = ['C:/web/air_wares' => 'vendor/coresky'];
+        $swap = ['../air_wares' => 'vendor/coresky'];
         $forward or $swap = array_flip($swap);
         Plan::_p('wares.php', strtr(Plan::_g('wares.php'), $swap));
         return Install::make($forward, [function () {
-            echo "\nTimezone's 'first-run' written\n";
+            CLI && print("\nTimezone's 'first-run' written\n");
             return yml('+ @eval @inc(make) mvc/timezone.yaml');
         }]);
     }

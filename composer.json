@@ -11,12 +11,13 @@
     "hole application"
   ],
   "require": {
-    "php": ">7.0",
-    "energy/air": "dev-master",
+    "php": ">=7.4.0",
+    "energy/air": "~0.545",
     "coresky/mercury": "dev-master",
     "coresky/venus": "dev-master",
     "coresky/earth": "dev-master",
-    "coresky/upload": "~0.514",
+    "coresky/upload": "~0.545",
+    "coresky/acl": "~0.545",
     "erusev/parsedown": "^1.7"
   },
   "authors": [

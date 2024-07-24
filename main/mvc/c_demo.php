@@ -7,6 +7,7 @@ class c_demo extends Controller
 
     function a_upload() {
         upload\ant::init();
+        return ACM::Rupload() ? ['e_file' => $this->t_file->listing()] : 404;
     }
 
     function a_file($id) {

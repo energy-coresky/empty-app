@@ -35,4 +35,10 @@
 <input type="file" style="opacity:0; position:fixed; top:-100em" autocomplete="off">
 <input type="hidden" value="" name="pic" autocomplete="off"> 
 </form>
+@loop($e_file)
+  <div style="width:222px; height:222px; float:left; margin-top:22px;">
+  <img src=@p(?img=$row->id) style="width:200px; height:200px"><br>
+  {{$row->name}}
+  </div>
+~loop
 #.upload

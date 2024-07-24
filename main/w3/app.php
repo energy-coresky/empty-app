@@ -39,4 +39,9 @@ class App extends Console
     function a_test() {
         require 'main/tests/list.php';
     }
+
+    /** XML */
+    function a_x() {
+        require 'main/z.php';
+    }
 }
