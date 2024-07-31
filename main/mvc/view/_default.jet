@@ -17,6 +17,7 @@ if (!$sky->d_static) {
     $sky->d_manual = 'ru';
     $sky->d_lgt = '_lgt';
     $sky->d_second_wares = 'vendor/coresky';
+    $sky->d_php_hl = 'b_far';
     $y_dtroot();
 }
 ~php
