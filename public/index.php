@@ -10,13 +10,13 @@ function index() {
 
 $ary = array (
   0 => 'ctype',
-  1 => 'filter',
-  2 => 'tokenizer',
-  3 => 'fileinfo',
-  4 => 'gd',
-  5 => 'intl',
-  6 => 'mbstring',
-  7 => 'sqlite3',
+  1 => 'fileinfo',
+  2 => 'filter',
+  3 => 'gd',
+  4 => 'intl',
+  5 => 'mbstring',
+  6 => 'sqlite3',
+  7 => 'tokenizer',
 );
 $anyway = $_GET && 'anw' == key($_GET) ? $_GET['anw'] : false;
 $tests = [
@@ -127,7 +127,7 @@ dd { width: 20%; margin:0; padding: 5px; }
     <button style="float:right" onclick="location.href='<?php echo "$path?anw=" . urlencode($uri) ?>'">Run app anyway</button>
     Problem fixed: <button onclick="location.href='<?php echo $uri ?>'">Test again</button><?php endif ?>
 </div>
-<div id="foo">ἄλφα.0.5145.HOLE.SKY. powered by 0.547.<a href="https://coresky.net/">Coresky</a> framework</div>
+<div id="foo">ἄλφα.0.5145.HOLE.SKY. powered by 0.564.<a href="https://coresky.net/">Coresky</a> framework</div>
 </body>
 </html><?php
 

@@ -6,4 +6,5 @@ s.php
 hole.base
 composer.lock
 main/venus
+main/tests/files
 .env

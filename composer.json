@@ -12,7 +12,7 @@
   ],
   "require": {
     "php": ">=7.4.0",
-    "energy/air": "~0.547",
+    "energy/air": "~0.564",
     "coresky/mercury": "dev-master",
     "coresky/venus": "dev-master",
     "coresky/earth": "dev-master",

@@ -4,7 +4,14 @@ class App extends Console
 {
     /** This is just test */
     function a_base() {
-        var_dump(SKY::$dd);
+$php = new PHP(file_get_contents('main/mvc/default_c.php'));
+foreach ($php->rank() as $y) {
+    if ('FUNCTION' == $y[0]->x) {
+        $from = $php->get_params($to);
+        echo $y[0]->str . $php->str($from, $to);
+    }
+}
+        #var_dump(SKY::$dd);
     }
 
     /** Test without database */
@@ -35,9 +42,14 @@ class App extends Console
         echo "DEV=$ary[APP_DEV]";
     }
 
+    /** Test nice */
+    function a_nice($m = '') {
+        require 'main/tests/nice.php';
+    }
+
     /** Test yamls */
-    function a_test() {
-        require 'main/tests/list.php';
+    function a_yaml() {
+        require 'main/tests/yaml.php';
     }
 
     /** XML */

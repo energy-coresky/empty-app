@@ -1,9 +1,7 @@
 <?php
 
 call_user_func(function() {
-    fseek($fp = fopen(__FILE__, 'r'), __COMPILER_HALT_OFFSET__);
-    $list = explode("\n~~\n", unl(stream_get_contents($fp)));
-    fclose($fp);
+    $list = explode("\n~~\n", "\n" . unl(Boot::tail(__FILE__, __COMPILER_HALT_OFFSET__)));
     foreach ($list as $n => $one) {
         [$y, $eq] = explode("\n~\n", $one, 2);
         $yml = YML::text($y);
@@ -114,4 +112,21 @@ array (
     's' => NULL,
     'x' => 2,
   ),
+)
+~~
+- [
+  @left(_) a
+]
+~
+array (
+  0 => 
+  array (
+    0 => '_a',
+  ),
+)
+~~
++ [0]
+~
+array (
+  0 => 0,
 )
