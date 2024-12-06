@@ -2,7 +2,7 @@
 
 # this is auto generated file, do not edit
 
-return[
+return [
     ['Assets-coresky', 'if ($cnt && \'m\' == $surl[0])
     return $surl[0] = \'etc\';//', '1', '/m/{0}'],
     1 => [

@@ -2,7 +2,7 @@
 
 # this is auto generated file, do not edit
 
-return[
+return [
     'earth' => ['path' => 'vendor/coresky/earth', 'class' => [], 'tune' => ''],
     'venus' => ['path' => 'vendor/coresky/venus', 'class' => [], 'tune' => ''],
     'upload' => [
