@@ -41,6 +41,5 @@ sky eval "var_export(YML::lint('-'));"
 sky eval "var_export(YML::lint('a'));"
 sky eval "print_r(yml('+ @sql(#select id as _,* from $_memory where id>5)'));" > z
 sky eval "PHP::ary(yml('+ @inc(yml.all_tokens) ~/assets/database.yaml'));"
-  # remove #[\AllowDynamicProperties]
 sky eval "Debug::file(DIR_S.'/w2/globals.php');"
 sky y "+ @inc(saw) ~/w2/_nice_php.yaml"

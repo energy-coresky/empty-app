@@ -7,5 +7,5 @@ hole.base
 composer.lock
 main/venus
 main/tests/files
-main/tests/nice.php.test
+main/tests/nice.php.diff
 .env
